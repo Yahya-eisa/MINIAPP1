@@ -120,7 +120,7 @@ def df_to_pdf_table(df, title="FLASH"):
 
     tz = pytz.timezone('Africa/Cairo')
     today = datetime.datetime.now(tz).strftime("%Y-%m-%d")
-    title_text = f"{title} | MINI MARKET | {today}"
+    title_text = f" MINI MARKET 🛒🛒 | {today}"
 
     elements = [
         Paragraph(fix_arabic(title_text), styleTitle),
@@ -141,8 +141,8 @@ def df_to_pdf_table(df, title="FLASH"):
     return elements
 
 # ---------- Streamlit App ----------
-st.set_page_config(page_title="🔥 mini market Orders Processor", layout="wide")
-st.title("🔥 MINI MARKET Orders Processor")
+st.set_page_config(page_title="🛒🛒 mini market Orders Processor", layout="wide")
+st.title("🛒🛒 MINI MARKET Orders Processor")
 st.markdown("....ارفع الملفات علشان تستلم الشيت")
 
 uploaded_files = st.file_uploader(
@@ -213,4 +213,5 @@ if uploaded_files:
             file_name=file_name,
             mime="application/pdf"
         )
+
 
